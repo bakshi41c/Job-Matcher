@@ -40,6 +40,11 @@
 				-webkit-border-radius:5px;
 				-moz-border-radius:5px;
 				border-radius:5px;
+				-webkit-transition: background-color 2s;
+				transition: background-color 2s;
+			}
+			.feature:hover, .feature:active{
+				background-color: #4099FF;
 			}
 			.feature:last-child{
 				border-bottom: none;
@@ -49,6 +54,11 @@
 			}
 			.button.radius{
 				margin-top: 10px;
+				-webkit-transition: background-color 2s;
+				transition: background-color 2s;
+			}
+			.button.radius:hover{
+				background-color: #4099FF;
 			}
 		</style>
 		<link rel="stylesheet" type="text/css" href="./foundation/css/foundation.min.css">
@@ -85,27 +95,22 @@
 				</div>
 				<div class="feature">
 					<span class="feature-description">
-						If you see something you like
+						Then you pick and choose what to hide
 					</span>
 				</div>
 				<div class="feature">
 					<span class="feature-description">
-						Swipe right to accept
+						By swiping left or right to dismiss
 					</span>
 				</div>
 				<div class="feature">
 					<span class="feature-description">
-						And left to keep browsing
+						And just keep browsing
 					</span>
 				</div>
 				<div class="feature">
 					<span class="feature-description">
-						No clicking
-					</span>
-				</div>
-				<div class="feature">
-					<span class="feature-description">
-						No fuss
+						No fuss, just the things you like.
 					</span>
 				</div>
 				<div class="text-center">
@@ -118,3 +123,12 @@
 		</div>
 	</body>
 </html> 
+<script>
+	var anchors = document.getElementsByTagName('a');
+	for(var i=0;i<anchors.length;i++){
+		anchors[i].addEventListener('click', function(e){
+			e.preventDefault();
+			alert('Download link coming soon');
+		});
+	}
+</script>
