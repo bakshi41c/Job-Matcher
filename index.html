@@ -24,6 +24,7 @@
 			}
 			.hero-image{
 				height: 300px;
+				display: inline-block;
 			}
 			.acknowledgements{
 				font-size: small;
@@ -72,15 +73,26 @@
 			.button.radius:hover{
 				background-color: #3B5998;
 			}
+			#hero-blue{
+				display:none;
+			}
+			.hero-container:hover #hero-blue{
+				display: inline-block;
+			}
+			.hero-container:hover #hero-green{
+				display:none;
+			}
 		</style>
 		<link rel="stylesheet" type="text/css" href="./foundation/css/foundation.min.css">
 	</head>
 	<body>
 		<div class="body-container small-12 medium-9 large-6 x-large-4 column small-centered">
 			<div class="text-center">
-				<a href="#download/link" id="hero-container">
-					<img class="hero-image" src="./hero-logo.png"/>
-					<img class="hero-image hide" src="./hero-logo-blue.png"/>
+				<a href="#download/link">
+					<div class="hero-container">
+						<img class="hero-image" id="hero-green" src="./hero-logo.png"/>
+						<img class="hero-image" id="hero-blue" src="./hero-logo-blue.png"/>
+					</div>
 				</a>
 			</div>
 			<div class="description row">
