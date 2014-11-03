@@ -88,7 +88,7 @@
 	<body>
 		<div class="body-container small-12 medium-9 large-6 x-large-4 column small-centered">
 			<div class="text-center">
-				<a href="#download/link">
+				<a target="_blank" href="http://youtu.be/QfyWJJ_BXoo">
 					<div class="hero-container">
 						<img class="hero-image" id="hero-green" src="./hero-logo.png"/>
 						<img class="hero-image" id="hero-blue" src="./hero-logo-blue.png"/>
@@ -98,7 +98,7 @@
 			<div class="description row">
 				Welcome to JM, a new way of matching employers to potential employees.
 				<div class="row text-center">
-					<a target="_blank" href="http://youtu.be/Z9Jt0LEs_2c" id="youtube-video" class="radius button">See the Demo</a>
+					<a target="_blank" href="http://youtu.be/QfyWJJ_BXoo" id="youtube-video" class="radius button">See the Demo</a>
 				</div>
 			</div>
 			
@@ -179,8 +179,10 @@
 	var anchors = document.getElementsByTagName('a');
 	for(var i=0;i<anchors.length;i++){
 		anchors[i].addEventListener('click', function(e){
-			//e.preventDefault();
-			//alert('Links coming soon');
+			if(this.getAttribute("href")=='#download/link'){
+				e.preventDefault();
+				alert('App coming soon...');
+			}
 		});
 	}
 </script>
